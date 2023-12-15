@@ -1,11 +1,17 @@
 import reflex as rx
+from web_reflex.components.navbar import navbar
+from web_reflex.views.header.header import header
+
 
 class State(rx.State):
     pass
 
 
 def index() -> rx.Component:
-    return rx.text("Hola Reflex!", color="blue", font_size="2rem")
+    return rx.vstack(
+        navbar(),
+        header(),
+    )
 
 
 app = rx.App()
