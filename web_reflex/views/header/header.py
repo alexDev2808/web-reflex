@@ -1,5 +1,6 @@
 import reflex as rx
 from web_reflex.components.link_icon import link_icon
+from web_reflex.components.info_text import info_text
 from web_reflex.styles.styles import Size as Size
 
 def header() -> rx.Component:
@@ -17,6 +18,14 @@ def header() -> rx.Component:
                 align_items="start"
             ),
 
+        ),
+        rx.flex(
+            info_text("+2", "años de experiencia."),
+            rx.spacer(),
+            info_text("+2", "años de experiencia."),
+            rx.spacer(),
+            info_text("+2", "años de experiencia."),
+            width="100%"
         ),
         rx.text("Soy ingeniero de software y actualmente trabajo como desarrollador web con Python y JavaScript"),
         spacing=Size.BIG.value,
