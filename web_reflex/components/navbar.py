@@ -6,10 +6,14 @@ def navbar() -> rx.Component:
     return rx.hstack(
         rx.text(
             "alexhDev",
-            font_size="2rem"
+            background_image="linear-gradient(271.68deg, #EE756A 0.75%, #756AEE 88.52%)",
+            background_clip="text",
+            font_weight="bold",
+            font_size="2em",
+            
         ),
         position="sticky",
-        bg="lightgreen",
+        # background_image="linear-gradient(271.68deg, #EE756A 0.75%, #756AEE 88.52%)",
         padding_x=Size.DEFAULT.value,
         padding_y=Size.SMALL.value,
         z_index="999",

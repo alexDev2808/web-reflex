@@ -17,7 +17,7 @@ def header() -> rx.Component:
                 ),
                 align_items="start"
             ),
-
+            spacing=Size.BIG.value
         ),
         rx.flex(
             info_text("+2", "años de experiencia."),
