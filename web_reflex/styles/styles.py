@@ -42,11 +42,12 @@ BASE_STYLE = {
     rx.Button: {
         "width": "100%",
         "height": "100%",
-        "display": "block",
         "padding": Size.SMALL.value,
         "border_radius": Size.DEFAULT.value,
         "color": TextColor.HEADER.value,
         "background_color": Color.CONTENT.value,
+        "white_space": "normal",
+        "text_align": "start",
         "_hover": {
             "background_color": Color.PURPLE_SECONDARY.value,
         }

@@ -18,7 +18,8 @@ def header() -> rx.Component:
                 color=TextColor.BODY.value,
                 padding="2px",
                 border="4px",
-                border_color=Color.PURPLE_SECONDARY.value
+                border_color=Color.PURPLE_SECONDARY.value,
+                
             ),
             rx.vstack(
                 rx.heading(
@@ -32,29 +33,36 @@ def header() -> rx.Component:
                 rx.hstack(
                     link_icon(
                         "icons/github.svg",
-                        Link.GITHUB
+                        Link.GITHUB,
+                        "GitHub"
                     ),
                     link_icon(
                         "icons/x-twitter.svg",
-                        Link.TWITTER
+                        Link.TWITTER,
+                        "Twitter/X"
                     ),
                     link_icon(
                         "icons/instagram.svg",
-                        Link.INSTAGRAM
+                        Link.INSTAGRAM,
+                        "Instagram"
                     ),
                     link_icon(
                         "icons/deezer.svg",
-                        Link.DEEZER
+                        Link.DEEZER,
+                        "Deezer"
                     ),
                     link_icon(
                         "icons/linkedin-in.svg",
-                        Link.LINKEDIN
+                        Link.LINKEDIN,
+                        "Linkedin"
                     ),
                     spacing=Size.BIG.value
                 ),
-                align_items="start"
+                align_items="start",
+                
             ),
-            spacing=Size.BIG.value
+            spacing=Size.BIG.value,
+            
         ),
         rx.flex(
             info_text("2+", "años de experiencia."),

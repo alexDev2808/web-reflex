@@ -15,14 +15,16 @@ def footer() -> rx.Component:
             f"@ 2022-{datetime.date.today().year} alexhDev2808 by J. Alexis V1.",
             href=const.TWITTER,
             is_external=True,
-            font_size=Size.MEDIUM.value
+            font_size=Size.MEDIUM.value,
+            text_align="center"
         ),
         rx.text(
             " Construido con ❤️ de Mexico para el mundo.",
-            font_size=Size.MEDIUM.value
+            font_size=Size.MEDIUM.value,
+            text_align="center"
         ),
         margin_top=Size.BIG.value,
         padding_bottom=Size.BIG.value,
+        padding_x=Size.BIG.value,
         color=TextColor.FOOTER.value
-
     )
