@@ -31,9 +31,7 @@ def index() -> rx.Component:
 
 
 app = rx.App(
-    stylesheets=[
-        "fonts/myfont.css"
-    ],
+    stylesheets=styles.STYLESHEETS,
     style=styles.BASE_STYLE
 )
 app.add_page(

@@ -5,10 +5,16 @@ from .colors import Color as Color
 from .colors import TextColor as TextColor
 
 from .fonts import Font as Font
+from .fonts import FontWeight as FontWeight
 
 # Constant
 MAX_WIDTH = "760px"
 
+# Fuentes remotas
+STYLESHEETS = [
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap",
+    "https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+]
 
 # Sizes
 
@@ -26,9 +32,11 @@ class Size(Enum):
     
 BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
+    "font_weight": FontWeight.LIGHT.value,
     "background_color": Color.BACKGROUND.value,
     rx.Heading: {
         "font_family": Font.TITLE.value,
+        "font_weight": FontWeight.MEDIUM.value,
         "color":TextColor.HEADER.value,
     },
     rx.Button: {
@@ -51,8 +59,8 @@ BASE_STYLE = {
 }
 
 navbar_title_style = dict(
-    font_family=Font.TITLE.value,
-    font_weight="bold",
+    font_family=Font.LOGO.value,
+    font_weight=FontWeight.BOLD.value,
     font_size=Size.BIG.value
 )
 
@@ -64,11 +72,13 @@ title_style = dict(
 
 button_title_style = dict(
     font_family=Font.TITLE.value,
+    font_weight=FontWeight.MEDIUM.value,
     font_size=Size.DEFAULT.value,
     color=TextColor.HEADER.value,
 )
 
 button_body_style = dict(
+    font_weight=FontWeight.LIGHT.value,
     font_size=Size.MEDIUM.value, 
     color=TextColor.BODY.value,
 )
