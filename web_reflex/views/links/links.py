@@ -15,6 +15,7 @@ def links() -> rx.Component:
         title("Contacto"),
         link_button("Email", Link.EMAIL, f"mailto:{Link.EMAIL}"),
         link_button("CV", "Descargar CV", Link.CV),
+
         width="100%",
         spacing=Size.MEDIUM.value
     )

@@ -4,6 +4,8 @@ from enum import Enum
 from .colors import Color as Color
 from .colors import TextColor as TextColor
 
+from .fonts import Font as Font
+
 # Constant
 MAX_WIDTH = "760px"
 
@@ -21,7 +23,12 @@ class Size(Enum):
 # Styles
     
 BASE_STYLE = {
+    "font_family": Font.DEFAULT.value,
     "background_color": Color.BACKGROUND.value,
+    rx.Heading: {
+        "font_family": Font.TITLE.value,
+        "color":TextColor.HEADER.value,
+    },
     rx.Button: {
         "width": "100%",
         "height": "100%",
@@ -42,18 +49,19 @@ BASE_STYLE = {
 }
 
 navbar_title_style = dict(
-    font_family="Comfortaa",
+    font_family=Font.LOGO.value,
     font_weight="bold",
     font_size=Size.BIG.value
 )
 
 title_style = dict(
     width='100%',
+    size="lg",
     padding_top=Size.DEFAULT.value,
-    color=TextColor.HEADER.value,
 )
 
 button_title_style = dict(
+    font_family=Font.TITLE.value,
     font_size=Size.DEFAULT.value,
     color=TextColor.HEADER.value,
 )

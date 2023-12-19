@@ -12,8 +12,7 @@ def header() -> rx.Component:
             rx.avatar(name="alexhDev2808", size="xl"),
             rx.vstack(
                 rx.heading(
-                    "Hola 👋🏻 mi nombre es J. Alexis",        size="lg",
-                    color=TextColor.HEADER.value
+                    "Hola 👋🏻 mi nombre es J. Alexis",
                 ),
                 rx.text(
                     "@Alexh1230", 
