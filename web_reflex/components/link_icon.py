@@ -1,10 +1,11 @@
 import reflex as rx
-import web_reflex.styles.styles as styles
+from web_reflex.styles.styles import Size as Size
 
-def link_icon(url: str) -> rx.Component:
+def link_icon(image: str, url: str) -> rx.Component:
     return rx.link(
-        rx.icon(
-            tag="link"
+        rx.image(
+            src=image,
+            width=Size.DEFAULT.value
         ),
         href=url,
         is_external=True

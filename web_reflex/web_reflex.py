@@ -36,5 +36,11 @@ app = rx.App(
     ],
     style=styles.BASE_STYLE
 )
-app.add_page(index)
+app.add_page(
+    index,
+    title="alexhDev | Mi sitio web",
+    description="Hola 👋🏻 mi nombre es J. Alexis. Soy ingeniero de software y actualmente trabajo como desarrollador web con Python y JavaScript. Aquí podrás encontrar todos mis enlaces de interés ¡Bienvenid@!",
+    image="avatar_1.jpg"
+    
+    )
 app.compile()

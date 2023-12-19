@@ -18,6 +18,8 @@ class Size(Enum):
     MEDIUM = "0.9em"
     LARGE = "1.5em"
     BIG = "2em"
+    VERY_BIG = "4em"
+    EXTRA_BIG = "8em"
 
 
 # Styles
@@ -49,7 +51,7 @@ BASE_STYLE = {
 }
 
 navbar_title_style = dict(
-    font_family=Font.LOGO.value,
+    font_family=Font.TITLE.value,
     font_weight="bold",
     font_size=Size.BIG.value
 )

@@ -4,12 +4,22 @@ from web_reflex.components.info_text import info_text
 from web_reflex.styles.styles import Size as Size
 from web_reflex.styles.colors import Color as Color
 from web_reflex.styles.colors import TextColor as TextColor
+import web_reflex.components.constants as Link
 
 
 def header() -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.avatar(name="alexhDev2808", size="xl"),
+            rx.avatar(
+                name="alexhDev2808", 
+                size="xl",
+                src="avatar_1.jpg",
+                bg=Color.CONTENT.value,
+                color=TextColor.BODY.value,
+                padding="2px",
+                border="4px",
+                border_color=Color.PURPLE_SECONDARY.value
+            ),
             rx.vstack(
                 rx.heading(
                     "Hola 👋🏻 mi nombre es J. Alexis",
@@ -20,9 +30,27 @@ def header() -> rx.Component:
                     color=TextColor.BODY.value
                     ),
                 rx.hstack(
-                    link_icon("https://twitter.com/Alexh1230"),
-                    link_icon("https://twitter.com/Alexh1230"),
-                    link_icon("https://twitter.com/Alexh1230"),
+                    link_icon(
+                        "icons/github.svg",
+                        Link.GITHUB
+                    ),
+                    link_icon(
+                        "icons/x-twitter.svg",
+                        Link.TWITTER
+                    ),
+                    link_icon(
+                        "icons/instagram.svg",
+                        Link.INSTAGRAM
+                    ),
+                    link_icon(
+                        "icons/deezer.svg",
+                        Link.DEEZER
+                    ),
+                    link_icon(
+                        "icons/linkedin-in.svg",
+                        Link.LINKEDIN
+                    ),
+                    spacing=Size.BIG.value
                 ),
                 align_items="start"
             ),
@@ -35,7 +63,7 @@ def header() -> rx.Component:
         ),
         rx.text(
             "Soy ingeniero de software y actualmente trabajo como desarrollador web con Python y JavaScript. Aquí podrás encontrar todos mis enlaces de interés ¡Bienvenid@! ",
-            color=TextColor.BODY.value
+            color=TextColor.BODY.value,
             ),
         spacing=Size.BIG.value,
         align_items="start",

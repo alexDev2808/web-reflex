@@ -7,14 +7,44 @@ import web_reflex.components.constants as Link
 def links() -> rx.Component:
     return rx.vstack(
         title("Proyectos"),
-        link_button("Twitter", "Mi perfil de Twitter donde comparto recursos para aprender", "https://twitter.com/Alexh1230"),
-        link_button("Linkedin", "Mi perfil en Linkedin", "https://linkedin.com"),
-        link_button("Spotify", "La musica que me gusta organizada en playlists" ,"https://spotify.com"),
-        link_button("GitHub", "Todos mis proyectos creados a lo largo de mi experiencia.", "https://github.com/alexDev2808"),
+        link_button(
+            "16 dias con Python", 
+            "16 dias aprendiendo Python y creando varias apps", 
+            "icons/python.svg",
+            Link.PYTHON_16
+        ),
+        link_button(
+            "Administrador de Pacientes", 
+            "App creada con Vue.js", 
+            "icons/vuejs.svg",
+            Link.ADMIN_PACIENTES_VUE
+        ),
+        link_button(
+            "Apps Android", 
+            "Una sola app que contiene por dentro diferentes apps con diferente funcionalidad.",
+            "icons/android.svg",
+            Link.ANDROID
+        ),
+        link_button(
+            "TMDB API", 
+            "Consumo de la API de TMDB con JavaScript.", 
+            "icons/square-js.svg",
+            Link.TMDB_API_JS
+        ),
 
         title("Contacto"),
-        link_button("Email", Link.EMAIL, f"mailto:{Link.EMAIL}"),
-        link_button("CV", "Descargar CV", Link.CV),
+        link_button(
+            "Email", 
+            Link.EMAIL, 
+            "icons/envelope-solid.svg", 
+            f"mailto:{Link.EMAIL}"
+        ),
+        link_button(
+            "CV", 
+            "Descargar CV", 
+            "icons/file-solid.svg", 
+            Link.CV
+        ),
 
         width="100%",
         spacing=Size.MEDIUM.value
