@@ -28,7 +28,7 @@ def header() -> rx.Component:
                 rx.text(
                     "@Alexh1230", 
                     margin_top="0px !important", 
-                    color=TextColor.BODY.value
+                    color=Color.PURPLE_SECONDARY.value
                     ),
                 rx.hstack(
                     link_icon(
